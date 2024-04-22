@@ -1,42 +1,70 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-}
-
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+/* App component */
+.App {
+    font-family: Arial;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 1rem; 
+    box-sizing: border-box;
   }
-  to {
-    transform: rotate(360deg);
+  
+  .main-title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
   }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+  
+  /* TasksList component */
+  .task-list {
+    width: 80%;
+    justify-content: center;
+    align-items: center;
   }
+
+  .list-element {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .list-element:last-child {
+    border-bottom: none;
+  }
+  
+  .list-element button {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+  }
+  
+  .list-element button:hover {
+    background-color: #c82333;
+  }
+  
+  /* TaskForm component */
+  .task-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+
+  .form-textfield {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 10px;
 }
 
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
+.submit-btn {
+  padding: 8px 15px;
+  outline: none;
+  border: 1px solid lightgray;
+  color: white;
+  background-color: #6161ff;
+  border-radius: 10px;
 }

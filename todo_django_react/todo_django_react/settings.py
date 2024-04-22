@@ -23,9 +23,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'todo_django_react',
     'api',
-    'rest_framework',
+    'todo_django_react',
     'corsheaders'
 ]
 
@@ -37,17 +36,16 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'corsheaders.middleware.CorsMiddleware'
+    'corsheaders.middleware.CorsMiddleware',
+    "django.middleware.common.CommonMiddleware",
+
 ]
 
-REST_FRAMEWORK = {'DEFAULT_AUTHENTICATION_CLASSES': [
-    'rest_framework.permissions.AllowAny'
-]}
-
-CORS_ORIGIN_ALLOW_ALL = True
-
+CORS_ALLOW_ALL_ORIGINS = True
 
 ROOT_URLCONF = 'todo_django_react.urls'
+
+
 
 TEMPLATES = [
     {
